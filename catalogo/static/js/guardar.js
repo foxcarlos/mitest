@@ -1,12 +1,12 @@
 Catalogo = {
 
     Guardar: function(codigo, nombre, cantidad){
-        var catCodigo = id
+        var catCodigo = codigo
         var catNombre = nombre
         var catCantidad = cantidad
         
         var request = $.ajax({
-            url: "notificar",
+            url: "guardar",
             method: "POST",
             data: JSON.stringify({ codigo : catCodigo, nombre: catNombre, catCantidad }),
             contentType:"application/json; charset=utf-8",
@@ -18,7 +18,7 @@ Catalogo = {
         });
 
         request.fail(function( jqXHR, textStatus ) {
-            alert( "Peticion fallo: " + textStatus );
+            alert( "Peticion AJAX fallo: " + textStatus );
         });
     },
 
