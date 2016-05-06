@@ -6,9 +6,9 @@ Catalogo = {
         var catCantidad = cantidad
         
         var request = $.ajax({
-            url: "guardar",
+            url: "catalogo_guardar",
             method: "POST",
-            data: JSON.stringify({ codigo : catCodigo, nombre: catNombre, catCantidad }),
+            data: JSON.stringify({ codigo : catCodigo, nombre: catNombre, cantidad: catCantidad }),
             contentType:"application/json; charset=utf-8",
             dataType: "json"
         });
