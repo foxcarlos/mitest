@@ -6,8 +6,8 @@ $(document).ready(function () {
     for (i = 0; i < rows.length; i++) {
         rows[i].onclick = function() {
             var seleccionado = this.rowIndex;
-            var contactosID = rows[seleccionado].cells[2].innerHTML;
-            alert("Se Selecciono: "+contactosID);
+            var codigo = rows[seleccionado].cells[0].innerHTML;
+            alert("Se Selecciono: "+codigo);
         };
     }
 
